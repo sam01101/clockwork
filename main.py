@@ -79,5 +79,5 @@ def main_invoke():
 
 
 for _ in range(random.randrange(3, 6)):
-    time.sleep(60 * random.randrange(1, 8))
+    # time.sleep(60 * random.randrange(1, 8))
     main_invoke()
