@@ -66,18 +66,18 @@ def main_invoke():
 
     try:
         for api_url in api_list:
-            # time.sleep(random.randrange(2, 12))
+            time.sleep(random.randrange(2, 12))
             if req.get(api_url, headers=headers).status_code == 200:
-                print("调用成功: ", api_url)
+                print("✔ ", api_url)
             else:
-                print("调用异常: ", api_url)
+                print("❌ ", api_url)
 
         print('此次运行结束时间为: ', time.asctime(time.localtime(time.time())))
-    except:
-        print("调用出现异常，pass")
+    except Exception as e:
+        print("调用出现异常", e)
         pass
 
 
 for _ in range(random.randrange(3, 6)):
-    # time.sleep(60 * random.randrange(1, 8))
+    time.sleep(60 * random.randrange(1, 8))
     main_invoke()
