@@ -66,7 +66,7 @@ def main_invoke():
 
     try:
         for api_url in api_list:
-            time.sleep(random.randrange(2, 12))
+            # time.sleep(random.randrange(2, 12))
             if req.get(api_url, headers=headers).status_code == 200:
                 print("调用成功: ", api_url)
             else:
