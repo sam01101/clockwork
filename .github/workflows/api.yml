@@ -1,5 +1,5 @@
 #自动调用 API
-name: Clockwork Auto Invoke API
+name: API Invoke
 
 on: 
   release:
@@ -31,7 +31,7 @@ jobs:
       env:
         GIST_HTTPS: ${{ secrets.GIST_HTTPS_WITH_TOKEN }}
       run: git clone $GIST_HTTPS
-    - name: Test Api # Api调用
+    - name: Invoke Api # Api调用
       env: 
         GIST_ID: ${{ secrets.GIST_ID }}
         GIST_TEXT: ${{ secrets.GIST_TEXT }}
